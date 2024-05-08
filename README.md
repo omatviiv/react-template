@@ -78,8 +78,9 @@ It will add support for imports and there is no need to install babel.
 
 [how to use ts-jest](https://github.com/kulshekhar/ts-jest)
 
-## SVGR
-Very useful library that allows to automatically transform svg into react component.
+## SVGs
+Automatic svg transformation into react components is done with the help
+of svgr library.
 Just followed instructions on svgr
 [documentation](https://react-svgr.com/docs/webpack/) to install it.
 
@@ -89,6 +90,25 @@ declaration available to typescript. Check `src/type/svg.d.ts`.
 When using suggested resourseQuery method to be able to use svg as url there was
 typescript related issue which was fixed with the help of this
 [question](https://stackoverflow.com/questions/60816666/how-to-use-query-param-import-in-webpack-with-typescript-without-getting-cannot).
+
+Often svgs are not optimised when exported from verctor graphics editors so
+there is automatic optimisation configured with gulp. Just run `npm run gulp` in
+separate terminal and it will watch for svg files in `svg/` and optimise
+automatically.
+
+Why not configure it on webpack level since it is already handling svgs:
+because webpack build is often run during deployment where adding
+new svgs is not the case. So a separate script `npm run gulp` should be run.
+And gulp will watch src folder for svg changes and will automatically
+optimise every svg file.
+
+
+# Take part in project development 
+1. clone the repo
+2. run `npm install`
+3. run `npm run dev`
+4. run `npm run jest` to run tests watch
+5. run `npm run gulp` to run svg images automatic optimisation
 
 
 # node & npm versions
