@@ -94,7 +94,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'React 18 Application Template',
       template: 'src/index.html',
-      favicon: 'src/assets/ukraine-flag.ico',
+      favicon: 'src/asset/ukraine-flag.ico',
     }),
   ],
 };

@@ -102,13 +102,28 @@ new svgs is not the case. So a separate script `npm run gulp` should be run.
 And gulp will watch src folder for svg changes and will automatically
 optimise every svg file.
 
+## Typescript
+@babel/preset-typescript is not performing any type checking ans simply
+ignores typescript errors so there is separate `npm run typecheck` and
+`npm run typecheck:watch` scripts to run typescript type checking.
+
+There is also an issue with @types/loader-utils which is not compatible with
+webpack 5. This issue is described
+[here](https://github.com/webpack/loader-utils/issues/179).
+The workaround is implemented:
+```
+  "postinstall": "rm -rf node_modules/@types/loader-utils"
+```
+
 
 # Take part in project development 
 1. clone the repo
 2. run `npm install`
 3. run `npm run dev`
-4. run `npm run jest` to run tests watch
-5. run `npm run gulp` to run svg images automatic optimisation
+4. run `npm run test:watch` to run tests watch
+5. run `npm run typecheck:watch` to run typescript typecheck watch
+6. (optional) `npm run svgo:watch` to watch and optimise svg files
+   npm build command will anyway run svgo recursively on src folder
 
 
 # node & npm versions
