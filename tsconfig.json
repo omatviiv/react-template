@@ -1,17 +1,26 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
+    "baseUrl": ".",
+    "outDir": "dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "module": "es2015",
+    "target": "es2015",
     "noImplicitAny": true,
-    "module": "es6",
-    "target": "es5",
     "jsx": "react",
-    "allowJs": true,
     "moduleResolution": "node",
+    "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "./",
     "paths": {
-      "src": ["src/*"],
-      "testdata": ["testdata/*"]
+      "src": ["./src/*"],
+      "testdata": ["./testdata/*"]
     }
-  }
+  },
+  "include": [
+    "./src",
+    "./testdata"
+  ],
+  "exclude": [
+    "./node_modules"
+  ]
 }

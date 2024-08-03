@@ -5,4 +5,4 @@ import Application from './app';
 
 const ApplicationContainer = document.getElementById('application-container');
 
-createRoot(ApplicationContainer).render(<Application />);
+createRoot(ApplicationContainer as HTMLElement).render(<Application />);
