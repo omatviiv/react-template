@@ -3,6 +3,6 @@ import {createRoot} from 'react-dom/client';
 
 import Application from './app';
 
-const ApplicationContainer = document.getElementById('application-container');
+  const ApplicationContainer = document.getElementById('application-container');
 
 createRoot(ApplicationContainer as HTMLElement).render(<Application />);

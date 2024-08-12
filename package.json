@@ -16,7 +16,8 @@
     "test:watch": "jest --watch",
     "audit": "npm audit --omit dev",
     "postinstall": "rm -rf node_modules/@types/loader-utils",
-    "prepare": "husky"
+    "prepare": "husky",
+    "prepush": "webpack -c ./webpack/prod.config.js; npm run typecheck; npm run test"
   },
   "repository": {
     "type": "git",
