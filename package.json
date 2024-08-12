@@ -4,7 +4,7 @@
   "description": "Preconfigured react template compatible with style agnostic components approach.",
   "main": "dist/index.html",
   "scripts": {
-    "build": "npm run svgo; webpack -c ./webpack/prod.config.js; npm run typecheck",
+    "build": "npm run svgo && webpack -c ./webpack/prod.config.js && npm run typecheck",
     "svgo": "svgo -rf src",
     "svgo:watch": "gulp",
     "analyze-build": "webpack -c ./webpack/analyze-prod.config.js",
@@ -17,7 +17,7 @@
     "audit": "npm audit --omit dev",
     "postinstall": "rm -rf node_modules/@types/loader-utils",
     "prepare": "husky",
-    "prepush": "npm run build && npm run typecheck && npm run test"
+    "prepush": "npm run build && npm run test"
   },
   "repository": {
     "type": "git",
