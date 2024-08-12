@@ -44,7 +44,7 @@ describe('testdata matches path in the import section', () => {
 
 describe('demonstrate test data usage', () => {
   it('somedata property value is 1', () => {
-    expect(data.p1).toBe(2);
+    expect(data.p1).toBe(1);
   });
 });
 
