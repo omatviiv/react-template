@@ -24,7 +24,7 @@ applied to styleagnostic-component.
 
 ## Eslint
 1. Install `npm install eslint --save-dev`
-2. Initialize `npx elsint --init`, here are questions&answers used:
+2. Initialize `npx eslint --init`, here are questions&answers used:
 ```
   omatviiv@Olehs-MBP:~/pers/react-template$ npx eslint --init
   You can also run this command directly using 'npm init @eslint/config'.
