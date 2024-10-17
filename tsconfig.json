@@ -12,8 +12,8 @@
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "paths": {
-      "src": ["./src/*"],
-      "testdata": ["./testdata/*"]
+      "src/*": ["./src/*"],
+      "testdata/*": ["./testdata/*"]
     }
   },
   "include": [
