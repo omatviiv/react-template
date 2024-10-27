@@ -40,7 +40,7 @@ const router = createBrowserRouter([
 
 const ApplicationContainer = document.getElementById('application-container');
 
-createRoot(ApplicationContainer).render(
+createRoot(ApplicationContainer as HTMLElement).render(
   <RouterProvider router={router}/>
 );
 
