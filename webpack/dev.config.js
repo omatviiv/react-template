@@ -6,6 +6,6 @@ module.exports = {
   stats: 'minimal',
   devServer: {
     static: './dist',
-    port: 8000,
+    port: 8001,
   },
 };
