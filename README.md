@@ -22,6 +22,7 @@ The same build setup **has to be used for style-agnostic-component** template.
 So everytime some changes introduced to react-template same changes have to be
 applied to styleagnostic-component.
 
+
 ## Eslint
 1. Install `npm install eslint --save-dev`
 2. Initialize `npx eslint --init`, here are questions&answers used:
@@ -78,6 +79,7 @@ It will add support for imports and there is no need to install babel.
 
 [how to use ts-jest](https://github.com/kulshekhar/ts-jest)
 
+
 ## SVGs
 Automatic svg transformation into react components is done with the help
 of svgr library.
@@ -102,6 +104,7 @@ new svgs is not the case. So a separate script `npm run gulp` should be run.
 And gulp will watch src folder for svg changes and will automatically
 optimise every svg file.
 
+
 ## Typescript
 @babel/preset-typescript is not performing any type checking ans simply
 ignores typescript errors so there is separate `npm run typecheck` and
@@ -114,6 +117,23 @@ The workaround is implemented:
 ```
   "postinstall": "rm -rf node_modules/@types/loader-utils"
 ```
+
+
+## Content Security Policy
+Briefly its best when CSP is set as HTTP response header but its also possible
+to configure CSP as <meta> tag. Its fairly simple with script-src and other
+properties since they are static most of the time but when it comes to
+style-src and CSS-in-JS libraries its more complicated since they generate
+styles dynamically.
+
+Here is very good [article](https://medium.com/@simon_p_kerr/css-in-js-fa1922ed1fcf)
+which among other things explains Content Security Policy (CSP) and
+styled-components solution.
+
+CSP implementation involves server side code changes and this is template for
+ui part only so its out of scope. That is why CSP style-src is set to
+unsafe-inline but when production application is created using this template
+this has to be handled as mentioned in the article mentioned.
 
 
 # Take part in project development 

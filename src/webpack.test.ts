@@ -28,7 +28,7 @@ describe('nonTestFiles matches file names', () => {
   });
 });
 
-const testdata = /^[\.\/]*testdata.*$/;
+const testdata = /^[./]*testdata.*$/;
 
 describe('testdata matches path in the import section', () => {
   it('starting with `testdata` (covers alias usage)', () => {
